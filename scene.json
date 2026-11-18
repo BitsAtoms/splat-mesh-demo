@@ -1,0 +1,25 @@
+{
+ "title": "Escena: Aulestia",
+ "splat": [
+  "aulestia.part1.spz",
+  "aulestia.part2.spz"
+ ],
+ "splatName": "aulestia.spz",
+ "collider": "collider.glb",
+ "settings": {
+  "flipSplat": false,
+  "flipCollider": false,
+  "height": 0.12,
+  "jumpMul": 5,
+  "speed": 2.1,
+  "thirdPerson": true,
+  "camZoom": 2.98,
+  "spawn": [
+   4.158,
+   -0.017,
+   1.926
+  ],
+  "yaw": 2.371,
+  "pitch": -0.444
+ }
+}

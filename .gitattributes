@@ -1,0 +1,3 @@
+# Archivos binarios: que git nunca toque sus finales de línea
+*.spz binary
+*.glb binary
