@@ -1,11 +1,11 @@
 {
  "title": "Escena: Aulestia",
  "splat": [
-  "aulestia.part1.spz",
-  "aulestia.part2.spz"
+  "scenes/aulestia/aulestia.part1.spz",
+  "scenes/aulestia/aulestia.part2.spz"
  ],
  "splatName": "aulestia.spz",
- "collider": "collider.glb",
+ "collider": "scenes/aulestia/collider.glb",
  "settings": {
   "flipSplat": false,
   "flipCollider": false,

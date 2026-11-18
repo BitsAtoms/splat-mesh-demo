@@ -1,0 +1,39 @@
+:root { --bg: rgba(18,18,22,.82); --fg: #e9e9ee; --mut: #9a9aa6; --acc: #39e6a6; --err: #ff6b6b; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #111114; color: var(--fg);
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+#c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; cursor: crosshair; }
+#panel { position: fixed; top: 12px; left: 12px; width: 290px; background: var(--bg); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.08); border-radius: 10px; padding: 12px 14px; z-index: 5; }
+#panel.hidden { display: none; }
+h1 { font-size: 14px; margin: 0 0 8px; font-weight: 600; }
+.row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.file { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 6px 0; }
+.file label.btn { flex: none; }
+.fname { color: var(--mut); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.btn { background: #2a2a33; color: var(--fg); border: 1px solid rgba(255,255,255,.12); border-radius: 6px;
+  padding: 5px 10px; cursor: pointer; font: inherit; }
+.btn:hover { border-color: var(--acc); }
+input[type=file] { display: none; }
+input[type=range] { flex: 1; accent-color: var(--acc); }
+input[type=checkbox] { accent-color: var(--acc); }
+.val { width: 62px; text-align: right; color: var(--mut); font-variant-numeric: tabular-nums; }
+hr { border: 0; border-top: 1px solid rgba(255,255,255,.08); margin: 10px 0; }
+#status { font-size: 12px; color: var(--mut); min-height: 18px; }
+#status.err { color: var(--err); }
+.note { color: var(--acc); font-size: 12px; margin: -4px 0 6px; }
+textarea { width: 100%; height: 64px; background: #1b1b22; color: var(--fg); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px; font: 11px ui-monospace, monospace; resize: vertical; }
+.row span:first-child { min-width: 92px; }
+.keys { color: var(--mut); font-size: 12px; }
+kbd { background: #2a2a33; border: 1px solid rgba(255,255,255,.15); border-bottom-width: 2px; border-radius: 4px;
+  padding: 0 4px; font: 11px ui-monospace, monospace; color: var(--fg); }
+#hud { position: fixed; right: 12px; bottom: 12px; background: var(--bg); border-radius: 8px; padding: 6px 10px;
+  font: 12px ui-monospace, monospace; color: var(--mut); z-index: 5; }
+#modeBadge { color: var(--acc); margin-right: 10px; }
+#crosshair { display: none; position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px;
+  border-radius: 50%; background: rgba(255,255,255,.8); pointer-events: none; z-index: 4; }
+#dropHint { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;
+  color: var(--mut); font-size: 15px; z-index: 1; }
+body.dragging #dropHint { display: flex !important; color: var(--acc); }
+body.dragging::after { content: ""; position: fixed; inset: 10px; border: 2px dashed var(--acc); border-radius: 14px; pointer-events: none; }
